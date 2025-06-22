@@ -17,6 +17,12 @@ int main()
     int age;
     cin >> age;
     //Check for correct data user Input
+    // Validate input: must be positive number
+    if (age < 0) 
+    {
+        cerr << "Error: Age cannot be negative!" << endl;
+        return 1;
+    }
     if (cin.fail()) {
         cerr << "Error: Invalid input! Please enter numbers only" << endl;
         return 1; // Finish with Error
